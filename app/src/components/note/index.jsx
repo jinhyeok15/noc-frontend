@@ -1,25 +1,17 @@
-import { Container } from "./container";
+import React, { Component } from 'react';
 
-function KeywordInput(props) {
-  return (
-    <input type="text" class="keyword-input" autofocus/>
-  );
+import KeywordInput from "./keywordInput";
+import Container from "./container";
+
+class Note extends Component {
+  render(props) {
+    return (
+      <main>
+        <KeywordInput/>
+        <Container/>
+      </main>
+    );
+  }
 }
 
-function KeywordInputButton(props) {
-  return (
-    <button type="button" class="keyword-input-button">
-      입력
-    </button>
-  );
-}
-
-export function Note(props) {
-  return (
-    <div class="main-screen">
-      <KeywordInput/>
-      <KeywordInputButton/>
-      <Container/>
-    </div>
-  )
-}
+export default Note;

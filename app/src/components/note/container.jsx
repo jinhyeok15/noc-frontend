@@ -1,27 +1,33 @@
-function RayoutContainer(props) {
+import React, { Component } from 'react';
+
+function RayoutContainer() {
   return (
-    <div class="rayout-container"></div>
+    <div className="rayout-container"></div>
   )
 }
 
-function MainContainer(props) {
+function MainContainer() {
   return (
-    <div class="main-container"></div>
+    <div className="main-container"></div>
   )
 }
 
-function KeywordDetailContainer(props) {
+function KeywordDetailContainer() {
   return (
-    <div class="keyword-detail-container"></div>
+    <div className="keyword-detail-container"></div>
   )
 }
 
-export function Container(props) {
-  return (
-    <div class="container-screen">
-      <RayoutContainer/>
-      <MainContainer/>
-      <KeywordDetailContainer/>
-    </div>
-  )
+class Container extends Component {
+  render() {
+    return (
+      <div className="container-screen">
+        <RayoutContainer/>
+        <MainContainer/>
+        <KeywordDetailContainer/>
+      </div>
+    );
+  }
 }
+
+export default Container;
